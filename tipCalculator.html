@@ -5,112 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tipCalculator.css">
     <title>Tip-Calculator</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-
-        }
-
-        .wrapper {
-
-            box-sizing: border-box;
-            border: 1px solid black;
-            width: 34%;
-            margin: auto;
-            margin-top: 20px;
-
-        }
-
-        .header {
-            box-sizing: border-box;
-            border: 1px solid black;
-            width: 90%;
-            margin: auto;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            text-align: center;
-        }
-
-        #amount {
-            margin-left: 15px;
-            margin: 20px;
-            padding: 3px;
-        }
-
-        .bill {
-            margin-left: 25px;
-        }
-
-        .bill__tip {
-            margin-left: 25px;
-        }
-
-        #sub,
-        #subPeople {
-            margin-left: 25px;
-            padding: 3px;
-            font-size: 15px;
-        }
-
-        #bill__amount {
-            width: 10%;
-            padding: 5px;
-            font-size: 15px;
-            font-weight: 600;
-        }
-
-        #add,
-        #addPeople {
-            padding: 3px;
-            font-size: 15px;
-        }
-
-        .split__bill {
-            margin-top: 10px;
-        }
-
-        .split {
-            margin-left: 25px;
-        }
-
-        #bill__split {
-            width: 10%;
-            padding: 5px;
-        }
-
-        .buttons {
-            margin-top: 25px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .calculate {
-            margin-right: 10px;
-            padding: 5px;
-            margin-bottom: 10px;
-        }
-
-        .clear {
-            margin-left: 10px;
-            padding: 5px;
-            margin-bottom: 10px;
-        }
-
-        .result {
-            box-sizing: border-box;
-            border: 1px solid black;
-            height: 40px;
-            width: 98%;
-            margin-left: 4px;
-            margin-top: 15px;
-            margin-bottom: 45px;
-            font-size: 18px;
-            border-radius: 5px;
-        }
-    </style>
-</head>
+    </head>
 
 <body>
     <div class="wrapper">
@@ -141,53 +38,7 @@
         </div>
         <div class="result"></div>
     </div>
-    <script>
-        const amount = document.getElementById('amount')
-        const increment = document.getElementById('add')
-        const decrement = document.getElementById('sub')
-        const tip = document.getElementById('bill__amount')
-        const split = document.getElementById('billSplit')
-        const clear = document.querySelector('.clear')
-        const calculate = document.querySelector('.calculate')
-        const result = document.querySelector('.result')
-        const increasePeople = document.getElementById('addPeople')
-        const decreasePeople = document.getElementById('subPeople')
-
-        clear.addEventListener('click', function () {
-            amount.value = ""
-            tip.innerText = "18"
-            split.innerText = '1'
-            result.innerHTML = ""
-        })
-        //buttons for tip perventage
-        increment.addEventListener('click', function () {
-            tip.innerText++
-        })
-        decrement.addEventListener('click', function () {
-            tip.innerHTML--
-        })
-        //buttons for split bill
-        increasePeople.addEventListener('click', function () {
-            split.innerHTML++
-        })
-
-        decreasePeople.addEventListener('click', function () {
-            if(split.innerText === '1'){
-                alert('People cannot be zero')
-                split.innerText++
-            }
-            split.innerHTML--
-        })
-        //for calculating total
-        calculate.addEventListener('click', function () {
-            let tipPercentage = tip.innerText / 100
-            let totalTip  = amount.value * tipPercentage;
-             let total = parseFloat(totalTip) + parseFloat(amount.value)
-            result.innerHTML = total / split.innerText
-            
-        })
-
-    </script>
+    <script src="tipCalculator.js"></script>
 </body>
 
 </html>
