@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+.wrapper {
+
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 34%;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+.header {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 90%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#amount {
+    margin-left: 15px;
+    margin: 20px;
+    padding: 3px;
+}
+
+.bill {
+    margin-left: 25px;
+}
+
+.bill__tip {
+    margin-left: 25px;
+}
+
+#sub,
+#subPeople {
+    margin-left: 25px;
+    padding: 3px;
+    font-size: 15px;
+}
+
+#bill__amount {
+    width: 10%;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#add,
+#addPeople {
+    padding: 3px;
+    font-size: 15px;
+}
+
+.split__bill {
+    margin-top: 10px;
+}
+
+.split {
+    margin-left: 25px;
+}
+
+#bill__split {
+    width: 10%;
+    padding: 5px;
+}
+
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calculate {
+    margin-right: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.clear {
+    margin-left: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.result {
+    box-sizing: border-box;
+    border: 1px solid black;
+    height: 40px;
+    width: 98%;
+    margin-left: 4px;
+    margin-top: 15px;
+    margin-bottom: 45px;
+    font-size: 18px;
+    border-radius: 5px;
+}
